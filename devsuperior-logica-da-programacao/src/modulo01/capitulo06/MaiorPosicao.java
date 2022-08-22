@@ -2,17 +2,17 @@ package modulo01.capitulo06;
 
 import java.util.Scanner;
 
-public class NumerosPares {
+public class MaiorPosicao {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		verificadorDeNumerosPares(input);
+		somaDeVetores(input);
 
 		input.close();
 	}
 
-	private static void verificadorDeNumerosPares(Scanner input) {
+	private static void somaDeVetores(Scanner input) {
 
 		int num = 0;
 
@@ -25,24 +25,25 @@ public class NumerosPares {
 	
 	public static void vetorizacao(int num, Scanner input) {
 		int [] vetor = new int[num];
-		int cont = 0;
+		double maiorValor = 0;
+		 int posicao = 0;
+		
 		for(int i = 0;i < vetor.length;i++) {
 			imprimir("Digite um numero: ");
 			vetor[i] = input.nextInt();
-		}
-		
-		imprimir("\nNUMEROS PARES:\n");
-		for(int i = 0;i < vetor.length;i++) {
 			
-			if(vetor[i] % 2 == 0){
-				imprimir(vetor[i] + " ");
-				cont++;
+			if(vetor[i] > maiorValor) {
+				maiorValor = vetor[i];
+				posicao = i;
 			}
 		}
-		imprimir("\nQUANTIDADE DE PARES = " + cont);
+		
+		imprimir("\nMAIOR VALOR = " +  maiorValor);
+		imprimir("\nPOSICAO DO MAIOR VALOR = " + posicao);
 	}
 
 	public static void imprimir(String texto) {
 		System.out.print(texto);
 	}
+
 }
