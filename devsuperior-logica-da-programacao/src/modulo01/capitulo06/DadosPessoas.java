@@ -1,11 +1,11 @@
 package modulo01.capitulo06;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class DadosPessoais {
+public class DadosPessoas {
 
 	public static void main(String[] args) {
-
 		Scanner input = new Scanner(System.in);
 
 		cadastrarDados(input);
@@ -14,7 +14,6 @@ public class DadosPessoais {
 	}
 
 	public static void cadastrarDados(Scanner input) {
-
 		double maiorAltura = 0, menorAltura = maiorAltura, mediaAlturaMulheres = 0;
 		int qtdHomens = 0, qtdMulheres = 0;
 
@@ -50,16 +49,17 @@ public class DadosPessoais {
 			if (alturas[i] > maiorAltura) {
 				maiorAltura = alturas[i];
 				menorAltura = alturas[i];
-			} else {
-				if (alturas[i] > maiorAltura) {
-					menorAltura = alturas[i];
-				}
+			} 
+			
+			if (alturas[i] < menorAltura) {
+				menorAltura = alturas[i];
 			}
 		}
 		mediaAlturaMulheres = (mediaAlturaMulheres / qtdMulheres);
 		imprimir("Menor altura = " + menorAltura);
 		imprimir("\nMaior altura = " + maiorAltura);
-		imprimir("\nMedia das alturas das mulheres = " + mediaAlturaMulheres);
+		imprimir("\nMedia das alturas das mulheres = ");
+		conversao(mediaAlturaMulheres);
 		imprimir("\nNumero de homens = " + qtdHomens);
 	}
 
@@ -69,6 +69,11 @@ public class DadosPessoais {
 
 	public static void msgErro() {
 		System.err.print("Entrada inválida digite novamente!\n");
+	}
+
+	public static void conversao(double num) {
+		DecimalFormat df = new DecimalFormat("#,##0.00");
+		imprimir(df.format(num));
 	}
 
 }
