@@ -35,7 +35,7 @@ public class Comerciante {
 
 		}
 
-		
+		vetorizacaoDeSoma(precosCompras, precosVendas);
 	}
 
 	public static void vetorizacao(double[] vetor, Scanner input) {
@@ -45,22 +45,22 @@ public class Comerciante {
 		}
 	}
 
-	public static void vetorizacaoDeSoma(double[] vetorA, double[] vetorB, Scanner input) {
+	public static void vetorizacaoDeSoma(double[] vetorA, double[] vetorB) {
 		double valorTotalCompra = 0, valorTotalVenda = 0, lucroTotal = 0;
 		int lucroAbaixoDeDez = 0, lucroEntreDezEVinte = 0, lucroAcimaDeVinte = 0;
 		double[] vetorC = new double[1];
 
 		for (int i = 0; i < vetorC.length; i++) {
 			vetorC[i] = (((vetorB[i] - vetorA[i]) * 100) / vetorB[i]);
-			
+
 			valorTotalCompra += vetorA[i];
 			valorTotalVenda += vetorB[i];
 
 			if (vetorC[i] < 10) {
 				lucroAbaixoDeDez++;
-			}else if(vetorC[i] > 10 && vetorC[i] < 20) {
+			} else if (vetorC[i] > 10 && vetorC[i] < 20) {
 				lucroEntreDezEVinte++;
-			}else {
+			} else {
 				lucroAcimaDeVinte++;
 			}
 		}
@@ -68,8 +68,8 @@ public class Comerciante {
 		relatorio(lucroAcimaDeVinte, lucroAcimaDeVinte, lucroAcimaDeVinte, lucroTotal, lucroTotal, lucroTotal);
 	}
 
-	public static void relatorio(int lucroAbaixoDeDez, 
-			int lucroEntreDezEVinte, int lucroAcimaDeVinte, double valorTotalCompra, double valorTotalVenda, double lucroTotal) {
+	public static void relatorio(int lucroAbaixoDeDez, int lucroEntreDezEVinte, int lucroAcimaDeVinte,
+			double valorTotalCompra, double valorTotalVenda, double lucroTotal) {
 		imprimir("\nRELATORIO:");
 		imprimir("\nLucro abaixo de 10%: " + lucroAbaixoDeDez);
 		imprimir("\nLucro entre de 10% e 20%: " + lucroEntreDezEVinte);

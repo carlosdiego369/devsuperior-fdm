@@ -3,7 +3,7 @@ package modulo01.capitulo06;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class DadosPessoas {
+public class DadosPessoais {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -36,13 +36,14 @@ public class DadosPessoas {
 					msgErro();
 					validacao = false;
 				} else {
-					if (generos[i].equalsIgnoreCase("M")) {
-						qtdHomens++;
-					} else {
-						qtdMulheres++;
-						mediaAlturaMulheres += alturas[i];
-					}
 					validacao = true;
+				}
+				
+				if (generos[i].equalsIgnoreCase("M")) {
+					qtdHomens++;
+				} else {
+					qtdMulheres++;
+					mediaAlturaMulheres += alturas[i];
 				}
 			}
 
