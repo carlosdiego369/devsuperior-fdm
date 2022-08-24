@@ -49,10 +49,9 @@ public class DadosPessoais {
 
 			if (alturas[i] > maiorAltura) {
 				maiorAltura = alturas[i];
-				menorAltura = alturas[i];
 			} 
-			
-			if (alturas[i] < menorAltura) {
+			menorAltura = alturas[0];
+			if (alturas[i] > maiorAltura) {
 				menorAltura = alturas[i];
 			}
 		}
