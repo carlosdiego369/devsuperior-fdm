@@ -31,7 +31,7 @@ public class Telefone {
 		String[][] nome = new String[quantidadeDeClientes][1];
 		String[][] telefone = new String[quantidadeDeClientes][1];
 		int[][] tipo = new int[quantidadeDeClientes][1];
-		int[][] minutos = new int[quantidadeDeClientes][1];
+		double[][] minutos = new double[quantidadeDeClientes][1];
 
 		for (int i = 0; i < quantidadeDeClientes; i++) {
 			imprimir("Dados do " + (i + 1) + "o. cliente:");
@@ -54,7 +54,7 @@ public class Telefone {
 				}
 
 				imprimir("Minutos: ");
-				minutos[i][j] = input.nextInt();
+				minutos[i][j] = input.nextDouble();
 				input.nextLine();
 			}
 			imprimir("\n");
@@ -73,13 +73,18 @@ public class Telefone {
 
 		for (int i = 0; i < quantidadeDeClientes; i++) {
 			for (int j = 0; j < nome[i].length; j++) {
-				imprimir(nome[i][j] + ", " +
-						telefone[i][j] + ", Tipo" +
-						tipo[i][j] + ", " + 
-						minutos[i][j] + ", Conta = \n");
+				imprimir(nome[i][j] + ", " + telefone[i][j] + ", Tipo " + tipo[i][j] + ", " + minutos[i][j]
+						+ ", Conta = ");
+
+				if (minutos[i][j] < 90) {
+					imprimir(precoBasico[tipo[i][j]][0] + "\n");
+				} else {
+					double valorConta = (minutos[i][j] - 90) * precoBasico[tipo[i][j]][1];
+					valorConta = valorConta + precoBasico[tipo[i][j]][0];
+					imprimir(valorConta + "\n");
+				}
 			}
 		}
-
 	}
 
 	public static void imprimir(String texto) {
