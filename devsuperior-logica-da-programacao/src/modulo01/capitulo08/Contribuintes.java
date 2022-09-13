@@ -36,7 +36,12 @@ public class Contribuintes {
 		imprimir("\nRELATÓRIO");
 		
 		imprimir("\nImposto sobre salário: ");
+		
+		if(impostoSobreSalario(rendaAnual) <= 3000) {
+			imprimir("Isento");
+		}else {
 		conversor(impostoSobreSalario(rendaAnual));
+		}
 		imprimir("\nImposto sobre serviços: ");
 		conversor(impostoSobreServicos(rendaAnualPrestacaoDeServico));
 		imprimir("\nImposto sobre ganho de capital: ");
@@ -54,16 +59,18 @@ public class Contribuintes {
 		double impostoSobreSalario = 0;
 		double rendaMensal = calculoDeRendaAnual(rendaAnual);
 		
-//		if(rendaMensal <= 3000) {
-//			imprimir("Isento: ");
-//		}else 
-			if(rendaMensal > 3000 && rendaMensal <= 5000) {
+		if(rendaMensal <= 3000) {
+			impostoSobreSalario = 0;
+		}else if(rendaMensal > 3000 && rendaMensal <= 5000) {
 			impostoSobreSalario = rendaAnual * 10 / 100;
 		}else {
 			impostoSobreSalario = rendaAnual * 20 / 100;
 		}
+		
 		return impostoSobreSalario;
 	}
+	
+	
 
 	public static double impostoSobreServicos(double rendaAnualPrestacaoDeServico) {
 		return rendaAnualPrestacaoDeServico * 15 / 100;
