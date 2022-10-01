@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: unset;
+}
+
+.generic-section {
+    min-height: 300px;
+    padding: 40px 20px;
+}
+
+.bg-gray {
+    background-color: #ddd;
+}
+
+.generic-section h1 {
+    font-size: 32px;
+}
+
+.generic-section p {
+    font-size: 24px;
+}
+
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.form-card{
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #999;
+}
+
+.form-card form{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    border: none;
+    background-color: #ddd;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+form input:focus{
+    outline: 1px solid #999;
+}
+
+.form-card form input{
+    height: 50px;    
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 20px;
+
+}
+
+.form-card form input::placeholder{
+   color: #aaf
+
+}
+
+.form-card form button{
+    height: 50px;    
+    border: none;  
+    border-radius: 5px;
+    background-color: #ff8400;
+
+}
+
+.form-card form button:hover{
+    height: 50px;    
+    border: none;  
+    border-radius: 5px;
+    background-color: #ffbb00;
+
+}
