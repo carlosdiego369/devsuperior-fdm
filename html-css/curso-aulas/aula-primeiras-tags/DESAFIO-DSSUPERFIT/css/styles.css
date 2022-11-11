@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-
 :root {
     --text-white: #fff;
     --bg-red: #f03c42;
     --bg-purple: #222374;
     --bg-silver: #CCCCCC;
     --bg-black: #000000;
-
 }
 
 * {
@@ -17,150 +15,150 @@
     padding: 0;
 }
 
+main{
+    min-height: calc(100vh - 300px);
+}
+
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
-    
 }
 
 a,
 a:hover {
-    color: var(--text-white);
+    color: unset;
     text-decoration: none;
-    font-size: 14px;
-
 }
 
-
-header {
+.nav-main {
     height: 100px;
     background-color: var(--bg-red);
-    padding: 0px 120px 40px 120px;
-
-}
-
-nav h1 {
-    font-size: 18px;
     color: var(--text-white);
-}
-
-header img {
-    padding: 0 5px 0 0;
-}
-
-#about {
-    background-color: var(--bg-purple);
-    padding: 0px 0px 40px 0px;
-}
-
-#about h2 {
-    color: var(--text-white);
-    font-size: 32px;
-    padding: 20px 0px 40px 120px;
-
-}
-
-.about-card-description {
-
-    border-radius: 8px;
-    background-color: var(--bg-silver);
-    margin: 0px 120px 40px 120px;
-}
-
-.about-card-description h3 {
-    padding: 20px;
-    font-size: 20px;
-    
-}
-
-.about-card-description p {
-    padding: 0 20px 20px 20px;
-    font-size: 14px;
-    
-}
-
-#modality{
-    background-color: var(--text-white);
-    padding: 0px 0px 40px 0px;
-}
-
-#modality h2 {
-    font-size: 32px;
-    color: var(--bg-red);
-    padding: 20px 0px 40px 120px;
-
-}
-
-.modality-card-description h3{
-    padding: 20px 0px 20px 20px;
-    font-size: 20px;
-    
-
-}
-
-.modality-card-description p{
-    padding: 0px 20px 20px 20px;
-    color: var(--bg-silver);
-}
-
-
-.card-modality {
-    margin: 0px 120px 20px 120px;
-    border-radius: 8px;
-    color: var(--text-white);
-    background-color: var(--bg-purple);
-    
-}
-
-footer{
     display: flex;
     align-items: center;
-    background-color: var(--bg-black);
-    margin: 0px;
-    color: var(--text-white);
-    text-align: center;
-    height: 262px;
-    font-size: 14px;
+    justify-content: space-between;
+    padding: 0 120px;
+
 }
 
-
-.footer-content{
-   display: flex;
-   flex-direction: column;
-   margin: 0 auto;
-}
-
-.footer-rede-social{
-   display: flex; 
-   align-items: center;
-}
-
-.card-instagram{
-    margin: 60px 10px 10px 10px;;
-}
-
-.footer-rede-social-instagram{
-    display: flex; 
+.nav-main a {
+    display: flex;
     align-items: center;
-    padding: 60px 10px 10px 25px;
- }
+}
 
-.footer-rede-social-instagram img{ 
-    margin:10px 
- }
+.nav-main img {
+    padding-right: 10px;
+}
 
-.footer-content-instagram a{
+.nav-main h2 {
+    font-size: 18px;
+}
+
+.nav-main a {
+    font-size: 14px;
+}
+
+.section-discover-space {
+    background-color: var(--bg-purple);
+    padding-right: 120px;
+    padding-left: 120px;
+    padding-bottom: 40px;
+}
+
+.section-discover-space h2 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: var(--text-white);
+    font-size: 32px;
+
+}
+
+.card-info {
+    background-color: var(--bg-silver);
+    border-radius: 8px;
+}
+
+.card-info h3 {
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+
+.card-info p {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.generic-card {
+    margin-bottom: 20px;
+}
+
+.section-modalities {
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-bottom: 40px;
+}
+
+.section-modalities h2 {
+    font-size: 32px;
+    color: var(--bg-red);
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.card-modalities {
+    height: 106px;
+    background-color: var(--bg-purple);
+    border-radius: 8px;
+    color: var(--text-white);
+}
+
+.card-modalities h3 {
+    padding: 20px;
+}
+
+.card-modalities p {
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social img {
     padding: 10px;
-    font-size: 14px;
+
 }
 
-.footer-content p{
-    padding: 36px 0px 0px 0px;
-    font-size: 14px;
-}
-
-.footer-content address{
-    padding: 0px 0px 60px 0px;
-    font-size: 14px;
+.rights-reserved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 36px;
 }
