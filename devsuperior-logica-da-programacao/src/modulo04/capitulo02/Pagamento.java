@@ -23,7 +23,6 @@ public class Pagamento {
 		imprimir("Combustivel gasto: ");
 		double combustivelGasto = input.nextDouble();
 
-
 		imprimir("Consumo medio = ");
 		imprimirValor(verificadorDeConsumo(distancia, combustivelGasto));
 

@@ -22,16 +22,16 @@ public class Medidas {
 
 		imprimir("Digite a medida B: ");
 		double medidaB = input.nextDouble();
-		
+
 		imprimir("Digite a medida C: ");
 		double medidaC = input.nextDouble();
 
 		imprimir("AREA DO QUADRADO = ");
 		imprimirValor(calculoAreaQuadrado(medidaA));
-		
+
 		imprimir("AREA DO TRIANGULO = ");
 		imprimirValor(calculoAreaTriangulo(medidaA, medidaB));
-		
+
 		imprimir("AREA DO TRAPEZIO = ");
 		imprimirValor(calculoAreaTrapezio(medidaA, medidaB, medidaC));
 
@@ -41,12 +41,12 @@ public class Medidas {
 		double total = medidaA * medidaA;
 		return total;
 	}
-	
+
 	public static double calculoAreaTriangulo(double medidaA, double medidaB) {
 		double total = (medidaA * medidaB) / 2;
 		return total;
 	}
-	
+
 	public static double calculoAreaTrapezio(double medidaA, double medidaB, double medidaC) {
 		double total = ((medidaA + medidaB) * medidaC) / 2;
 		return total;
