@@ -27,7 +27,7 @@ buildNumber.properties
 ##############################
 ## Eclipse
 ##############################
-.settings/
+.settings
 bin/
 tmp/
 .metadata
