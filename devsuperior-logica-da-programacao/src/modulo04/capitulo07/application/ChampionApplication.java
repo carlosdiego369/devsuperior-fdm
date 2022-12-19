@@ -12,7 +12,7 @@ public class ChampionApplication {
 
 		printOff("Digite os dados do primeiro campeão:");
 		printOff("\nNome: ");
-		String nome = input.nextLine();
+		String name = input.nextLine();
 
 		printOff("Vida inicial: ");
 		int life = input.nextInt();
@@ -26,11 +26,11 @@ public class ChampionApplication {
 		int armor = input.nextInt();
 		input.nextLine();
 
-		Champion c1 = new Champion(nome, life, attack, armor);
+		Champion c1 = new Champion(name, life, attack, armor);
 
 		printOff("\nDigite os dados do segundo campeão:");
 		printOff("\nNome: ");
-		nome = input.nextLine();
+		name = input.nextLine();
 
 		printOff("Vida inicial: ");
 		life = input.nextInt();
@@ -44,7 +44,7 @@ public class ChampionApplication {
 		armor = input.nextInt();
 		input.nextLine();
 
-		Champion c2 = new Champion(nome, life, attack, armor);
+		Champion c2 = new Champion(name, life, attack, armor);
 
 		printOff("\nQuanto turnos você deseja executar? ");
 		int shift = input.nextInt();
