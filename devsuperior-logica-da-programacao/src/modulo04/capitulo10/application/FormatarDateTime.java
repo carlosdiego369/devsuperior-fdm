@@ -29,6 +29,8 @@ public class FormatarDateTime {
 		System.out.println("D05 = " + d05.format(fmt2));
 		System.out.println("D05 = " + d05.format(fmt4));
 
+		
+		System.out.println("D010 = " + fmt4.format(d05));
 		System.out.println("D06 = " + fmt3.format(d06));
 		System.out.println("D06 = " + fmt5.format(d06));
 		System.out.println("D06 = " + d06.toString());

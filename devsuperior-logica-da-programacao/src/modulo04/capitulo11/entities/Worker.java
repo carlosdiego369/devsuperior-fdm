@@ -9,7 +9,7 @@ import modulo04.capitulo11.entities.enums.WorkerLevel;
 public class Worker {
 
 	private String name;
-	WorkerLevel level;
+	private WorkerLevel level;
 	private double baseSalary;
 
 	private Department department;
