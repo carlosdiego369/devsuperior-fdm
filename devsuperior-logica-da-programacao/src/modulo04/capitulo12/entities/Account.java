@@ -1,6 +1,6 @@
 package modulo04.capitulo12.entities;
 
-public class Account {
+public abstract class Account {
 
 	private Integer number;
 	private String holder;

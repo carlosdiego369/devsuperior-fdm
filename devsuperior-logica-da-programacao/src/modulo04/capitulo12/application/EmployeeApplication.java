@@ -48,8 +48,7 @@ public class EmployeeApplication {
 
 				list.add(emp);
 			} else {
-				Employee emp = new Employee(name, hours, valuePerHour);
-				list.add(emp);
+				list.add(new Employee(name, hours, valuePerHour));
 			}
 
 		}
