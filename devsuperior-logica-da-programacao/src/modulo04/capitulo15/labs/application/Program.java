@@ -29,21 +29,21 @@ public class Program {
 		LocalDateTime finish = LocalDateTime.parse(input.nextLine(), fmt);
 
 		CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
-		
+
 		printOff("Entre com o preço por hora: ");
 		double pricePerHour = input.nextDouble();
 		printOff("Entre com o preço por dia: ");
 		double pricePerDay = input.nextDouble();
-		
+
 		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxServices());
-		
+
 		rentalService.processInvoice(cr);
-		
+
 		printOff("FATURA");
 		printOff("\nPagamento basico: " + df.format(cr.getInvoice().getBasicPayment()));
 		printOff("\nImposto: " + df.format(cr.getInvoice().getTax()));
 		printOff("\nPagamento total: " + df.format(cr.getInvoice().getTotalPayment()));
-		
+
 		input.close();
 	}
 

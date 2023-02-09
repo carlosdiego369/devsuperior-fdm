@@ -1,6 +1,6 @@
 package modulo04.capitulo15.labs.model.services;
 
-public class BrazilTaxServices implements TaxServices{
+public class BrazilTaxServices implements TaxServices {
 
 	public double tax(double amount) {
 		if (amount <= 100) {

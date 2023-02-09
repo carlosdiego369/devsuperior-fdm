@@ -12,12 +12,12 @@ public class ApplicationTryWithResources {
 
 		String path = "c:\\temp\\out.txt";
 
-		try (BufferedWriter bw = 
-				new BufferedWriter(new FileWriter(path/*, true (ele escreve em baixo */))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path/* , true (ele escreve em baixo */))) {
 			for (String line : lines) {
 				bw.write(line);
 				bw.newLine();
 			}
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
