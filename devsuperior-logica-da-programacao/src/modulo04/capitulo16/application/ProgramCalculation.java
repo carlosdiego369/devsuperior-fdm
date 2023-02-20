@@ -31,7 +31,5 @@ public class ProgramCalculation {
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
 		}
-
 	}
-
 }
