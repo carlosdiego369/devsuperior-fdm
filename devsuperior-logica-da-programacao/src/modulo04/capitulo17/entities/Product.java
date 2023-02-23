@@ -1,5 +1,7 @@
 package modulo04.capitulo17.entities;
 
+import java.text.DecimalFormat;
+
 public class Product {
 
 	private String name;
@@ -26,8 +28,17 @@ public class Product {
 		this.price = price;
 	}
 
+	public static boolean staticProductPredicate(Product p) {
+		return p.getPrice() >= 100.0;
+	}
+
+	public boolean noStaticProductPredicate() {
+		return getPrice() >= 100.0;
+	}
+
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", price=" + price + "]";
+		DecimalFormat df = new DecimalFormat("##0.00");
+		return name + ", " + df.format(getPrice());
 	}
 }
