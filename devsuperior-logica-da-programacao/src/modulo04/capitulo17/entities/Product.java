@@ -36,6 +36,22 @@ public class Product {
 		return getPrice() >= 100.0;
 	}
 
+	public static void staticPriceUpdate(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
+	}
+
+	public void noStaticPriceUpdate() {
+		setPrice(getPrice() * 1.1);
+	}
+
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+	}
+
+	public String noStaticUpperCaseName() {
+		return getName().toUpperCase();
+	}
+
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("##0.00");
